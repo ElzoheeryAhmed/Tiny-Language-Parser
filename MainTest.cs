@@ -28,6 +28,7 @@ namespace CompilerTest
             Procedures p = new Procedures(ctokentype,ctokenvalue);
             Node n =p.program();
             p.inOrderConstantFolding(ref n);
+
             if (p.Status==1) { p.inOrderTraversal(n);Console.WriteLine($"{(n.Next).X},{(n.Next).Y}"); }
           else { Console.WriteLine("Can`t be parsed"); }
          
